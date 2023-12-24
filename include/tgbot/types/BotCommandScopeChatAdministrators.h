@@ -1,10 +1,10 @@
-#ifndef TGBOT_BOTCOMMANDSCOPECHATADMINISTRATORS_H
-#define TGBOT_BOTCOMMANDSCOPECHATADMINISTRATORS_H
+#pragma once
 
 #include "tgbot/types/BotCommandScope.h"
 
 #include <cstdint>
 #include <memory>
+
 
 namespace TgBot {
 
@@ -13,21 +13,19 @@ namespace TgBot {
  *
  * @ingroup types
  */
-class BotCommandScopeChatAdministrators : public BotCommandScope {
-public:
-    static const std::string TYPE;
+    class BotCommandScopeChatAdministrators : public BotCommandScope {
+    public:
+        static const std::string TYPE;
 
-    typedef std::shared_ptr<BotCommandScopeChatAdministrators> Ptr;
+        typedef std::shared_ptr<BotCommandScopeChatAdministrators> Ptr;
 
-    BotCommandScopeChatAdministrators() {
-        this->type = TYPE;
-    }
+        BotCommandScopeChatAdministrators() {
+            this->type = TYPE;
+        }
 
-    /**
-     * @brief Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)
-     */
-    std::int64_t chatId;
-};
+        /**
+         * @brief Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)
+         */
+        std::int64_t chatId{0};
+    };
 }
-
-#endif //TGBOT_BOTCOMMANDSCOPECHATADMINISTRATORS_H

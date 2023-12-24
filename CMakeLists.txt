@@ -6,12 +6,12 @@ if(POLICY CMP0074)
 endif()
 
 # options
-option(ENABLE_TESTS "Set to ON to enable building of tests" OFF)
+option(ENABLE_TESTS "Set to ON to enable building of tests" ON)
 option(BUILD_SHARED_LIBS "Build tgbot-cpp shared/static library." OFF)
 option(BUILD_DOCUMENTATION "Build doxygen API documentation." OFF)
 
 # sources
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 if(WIN32)

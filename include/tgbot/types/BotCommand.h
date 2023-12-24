@@ -1,9 +1,9 @@
-#ifndef TGBOT_BOTCOMMAND_H
-#define TGBOT_BOTCOMMAND_H
+#pragma once
 
 #include <cstdint>
 #include <string>
 #include <memory>
+
 
 namespace TgBot {
 
@@ -13,24 +13,23 @@ namespace TgBot {
  * https://core.telegram.org/bots/api#botcommand
  * @ingroup types
  */
-class BotCommand {
-public:
-    typedef std::shared_ptr<BotCommand> Ptr;
-    BotCommand() { }
+    class BotCommand {
+    public:
+        typedef std::shared_ptr<BotCommand> Ptr;
 
-    virtual ~BotCommand() { }
+        BotCommand() {}
 
-    /**
-     * @brief command label.
-     */
-    std::string command;
+        virtual ~BotCommand() {}
 
-    /**
-     * @brief description label.
-     */
-    std::string description;
+        /**
+         * @brief command label.
+         */
+        std::string command;
 
-};
+        /**
+         * @brief description label.
+         */
+        std::string description;
+
+    };
 }
-
-#endif //TGBOT_BOTCOMMAND_H

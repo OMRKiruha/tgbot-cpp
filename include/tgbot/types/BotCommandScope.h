@@ -1,8 +1,8 @@
-#ifndef TGBOT_BOTCOMMANDSCOPE_H
-#define TGBOT_BOTCOMMANDSCOPE_H
+#pragma once
 
 #include <memory>
 #include <string>
+
 
 namespace TgBot {
 
@@ -13,19 +13,17 @@ namespace TgBot {
  *
  * @ingroup types
  */
-class BotCommandScope {
-public:
-    typedef std::shared_ptr<BotCommandScope> Ptr;
+    class BotCommandScope {
+    public:
+        typedef std::shared_ptr<BotCommandScope> Ptr;
 
-    BotCommandScope() {}
+        BotCommandScope() {}
 
-    virtual ~BotCommandScope() {}
+        virtual ~BotCommandScope() {}
 
-    /**
-     * @brief Scope type
-     */
-    std::string type;
-};
+        /**
+         * @brief Scope type
+         */
+        std::string type;
+    };
 }
-
-#endif //TGBOT_BOTCOMMANDSCOPE_H

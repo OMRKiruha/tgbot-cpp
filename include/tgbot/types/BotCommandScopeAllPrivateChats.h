@@ -1,9 +1,9 @@
-#ifndef TGBOT_BOTCOMMANDSCOPEALLPRIVATECHATS_H
-#define TGBOT_BOTCOMMANDSCOPEALLPRIVATECHATS_H
+#pragma once
 
 #include "tgbot/types/BotCommandScope.h"
 
 #include <memory>
+
 
 namespace TgBot {
 
@@ -12,16 +12,14 @@ namespace TgBot {
  *
  * @ingroup types
  */
-class BotCommandScopeAllPrivateChats : public BotCommandScope {
-public:
-    static const std::string TYPE;
+    class BotCommandScopeAllPrivateChats : public BotCommandScope {
+    public:
+        static const std::string TYPE;
 
-    typedef std::shared_ptr<BotCommandScopeAllPrivateChats> Ptr;
+        typedef std::shared_ptr<BotCommandScopeAllPrivateChats> Ptr;
 
-    BotCommandScopeAllPrivateChats() {
-        this->type = TYPE;
-    }
-};
+        BotCommandScopeAllPrivateChats() {
+            this->type = TYPE;
+        }
+    };
 }
-
-#endif //TGBOT_BOTCOMMANDSCOPEALLPRIVATECHATS_H

@@ -1,9 +1,9 @@
-#ifndef TGBOT_BOTCOMMANDSCOPEDEFAULT_H
-#define TGBOT_BOTCOMMANDSCOPEDEFAULT_H
+#pragma once
 
 #include "tgbot/types/BotCommandScope.h"
 
 #include <memory>
+
 
 namespace TgBot {
 
@@ -13,16 +13,14 @@ namespace TgBot {
  *
  * @ingroup types
  */
-class BotCommandScopeDefault : public BotCommandScope {
-public:
-    static const std::string TYPE;
+    class BotCommandScopeDefault : public BotCommandScope {
+    public:
+        static const std::string TYPE;
 
-    typedef std::shared_ptr<BotCommandScopeDefault> Ptr;
+        typedef std::shared_ptr<BotCommandScopeDefault> Ptr;
 
-    BotCommandScopeDefault() {
-        this->type = TYPE;
-    }
-};
+        BotCommandScopeDefault() {
+            this->type = TYPE;
+        }
+    };
 }
-
-#endif //TGBOT_BOTCOMMANDSCOPEDEFAULT_H
