@@ -3999,7 +3999,7 @@ namespace TgBot {
         result->currency = data.get<std::string>("currency");
         result->totalAmount = data.get<std::int32_t>("total_amount");
         result->invoicePayload = data.get<std::string>("invoice_payload");
-        result->shippingOptionId = data.get<std::string>("shipping_option_id");
+        //result->shippingOptionId = data.get<std::string>("shipping_option_id");
         result->orderInfo = tryParseJson(&TgTypeParser::parseJsonAndGetOrderInfo, data, "order_info");
         return result;
     }
@@ -4010,7 +4010,7 @@ namespace TgBot {
         appendToJson(result, "currency", object->currency);
         appendToJson(result, "total_amount", object->totalAmount);
         appendToJson(result, "invoice_payload", object->invoicePayload);
-        appendToJson(result, "shipping_option_id", object->shippingOptionId);
+        //appendToJson(result, "shipping_option_id", object->shippingOptionId);
         result += R"("order_info":)";
         result += parseOrderInfo(object->orderInfo);
         result += ",";
